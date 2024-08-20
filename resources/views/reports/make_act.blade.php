@@ -34,13 +34,15 @@
             
 
             <p>
-                {!! trans('general.report_fields_info') !!}
+                {!! trans('general.act_fields_info') !!}
             </p>
 
               <br>
 
-            @include ('partials.forms.edit.company-select', ['translated_name' => trans('general.company'),'multiple' => 'true', 'fieldname' => 'by_company_id[]', 'hide_new' => 'true'])
-      
+            
+            <label for=""> Найти пользователя:
+
+            </label>
 
         
 
