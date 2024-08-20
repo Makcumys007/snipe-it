@@ -9,6 +9,7 @@ return [
     'accessory_report'		=> 'Accessory Report',
     'action'                => 'Action',
     'activity_report'		=> 'Activity Report',
+    'make_act'		        => 'Make ACT',
     'address'				=> 'Address',
     'admin'					=> 'Admin',
     'admin_tooltip'			=> 'This user has admin privileges',
