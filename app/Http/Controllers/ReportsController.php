@@ -399,6 +399,14 @@ class ReportsController extends Controller
 
         return view('reports/custom')->with('customfields', $customfields);
     }
+    /*Make Act function */
+    public function makeAct() : View
+    {
+        $this->authorize('reports.view');
+        $customfields = CustomField::get();
+
+        return view('reports/make_act')->with('customfields', $customfields);
+    }
 
     /**
      * Exports the custom report to CSV

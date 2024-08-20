@@ -745,7 +745,7 @@ dir="{{ Helper::determineLanguageDirection() }}">
                                 <ul class="treeview-menu">
                                     <!-- Act Generator -->
                                     <li>
-                                        <a href="{{ route('reports.activity') }}" {{ (Request::is('reports/activity') ? ' class="active"' : '') }}>
+                                        <a href="{{ route('reports.activity') }}" {{ (Request::is('reports/make_act') ? ' class="active"' : '') }}>
                                             {{ trans('general.make_act') }}
                                         </a>
                                     </li>
