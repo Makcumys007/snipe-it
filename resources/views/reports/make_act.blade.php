@@ -2,7 +2,7 @@
 
 {{-- Page Title --}}
 @section('title')
-{{ trans('general.custom_report') }}
+{{ trans('general.make_act_report') }}
 @parent
 @stop
 
@@ -24,7 +24,7 @@
     <!-- Horizontal Form -->
       <div class="box box-default">
         <div class="box-header with-border">
-          <h2 class="box-title">{{  trans('general.customize_report') }}</h2>
+          <h2 class="box-title">{{  trans('general.act_report') }}</h2>
         </div><!-- /.box-header -->
 
         <div class="box-body">

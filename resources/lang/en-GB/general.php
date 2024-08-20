@@ -90,6 +90,7 @@ return [
     'current_password'      => 'Current Password',
     'customize_report'      => 'Customise Report',
     'custom_report'         => 'Custom Asset Report',
+    'make_act_report'       => 'Make Act',
     'dashboard'				=> 'Dashboard',
     'days'      			=> 'days',
     'days_to_next_audit'    => 'Days to Next Audit',

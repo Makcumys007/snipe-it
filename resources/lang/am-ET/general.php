@@ -89,6 +89,7 @@ return [
     'current'  				=> 'Current',
     'current_password'      => 'Current Password',
     'customize_report'      => 'Customize Report',
+    'act_report'            => 'Act Report',
     'custom_report'         => 'Custom Asset Report',
     'dashboard'				=> 'Dashboard',
     'days'      			=> 'days',
