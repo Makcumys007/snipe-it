@@ -10,14 +10,15 @@
             margin: 0;
             padding: 0;
             background-color: #fff;
+            font-size: 130%; /* Увеличиваем шрифт на 20% */
         }
 
         .container {
-            width: calc(100% - 60px); /* Уменьшаем ширину на 60px (по 30px с каждой стороны) */
+            width: calc(100% - 100px); /* Уменьшаем ширину на 100px (по 50px с каждой стороны) */
             margin: 0 auto;
             padding: 20px;
-            padding-left: 30px; /* Добавляем отступ слева */
-            padding-right: 30px; /* Добавляем отступ справа */
+            padding-left: 50px; /* Добавляем отступ слева */
+            padding-right: 50px; /* Добавляем отступ справа */
         }
 
         header {
@@ -33,7 +34,8 @@
         }
 
         .date {
-            font-size: 16px;
+            font-size: 24px;
+            font-weight: bold;
         }
 
         h1, h2 {
@@ -48,6 +50,10 @@
 
         table, th, td {
             border: 1px solid #000;
+        }
+
+        th {
+            background-color: #f2f2f2;
         }
 
         th, td {
