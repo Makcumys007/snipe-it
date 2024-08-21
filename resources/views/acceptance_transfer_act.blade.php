@@ -112,8 +112,8 @@
             </div>
             <div class="signature-block">
                 <p>Equipment accepted by:</p>
-                <p>Position: Training and Development Specialist</p>
-                <p>Full name: [Имя]</p>
+                <p>Position:  {{ $asset->assignedTo->present()->name()}}</p>
+                <p>Full name:  {{ $asset->assignedTo->present()->name()}}</p>
                 <p>Signature: __________________</p>
             </div>
         </div>
