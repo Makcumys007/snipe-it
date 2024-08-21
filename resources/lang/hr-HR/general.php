@@ -363,7 +363,6 @@ return [
     'to'                    => 'To',
     'report_fields_info'    => '<p>Select the fields you would like to include in your custom report, and click Generate. The file (custom-asset-report-YYYY-mm-dd.csv) will download automatically, and you can open it in Excel.</p>
             <p>If you would like to export only certain assets, use the options below to fine-tune your results.</p>',
-    'act_fields_info' => '<p>Select the user for whom you want to receive the acceptance certificate, then select the devices you want to include in the certificate, and click "Generate". The file (act-asset-report-YYYY-mm-dd.csv) will be loaded automatically.</p>',
     'range'                 => 'Range',
     'bom_remark'            => 'Add a BOM (byte-order mark) to this CSV',
     'improvements'          => 'Improvements',

@@ -380,9 +380,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('reports/custom', [ReportsController::class, 'getCustomReport'])->name('reports/custom');
     Route::post('reports/custom', [ReportsController::class, 'postCustom']);
 
-    /* Make Act */
-    Route::get('reports/make_act', [ReportsController::class, 'makeAct'])->name('reports/make_act');
-    Route::post('reports/make_act', [ReportsController::class, 'postMakeAct']);
+
 
     Route::get(
         'reports/activity',
