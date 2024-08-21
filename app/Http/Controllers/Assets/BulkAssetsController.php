@@ -529,9 +529,9 @@ class BulkAssetsController extends Controller
          if ($request->session()->has('bulk_back_url')) {
              $bulk_back_url = $request->session()->pull('bulk_back_url');
          }
-     
+        
          if ($request->filled('ids')) {
-             $assets = Asset::find($request->get('ids'));    
+             $assets = Asset::find($request->get('ids'));            
             
              // Здесь вы можете передать данные в представление, если это необходимо
              return response()->view('acceptance_transfer_act', [
@@ -539,7 +539,6 @@ class BulkAssetsController extends Controller
             ]);
          }
      
-         return redirect($bulk_back_url)->with('error', trans('admin/hardware/message.delete.nothing_updated'));
      }
     
 

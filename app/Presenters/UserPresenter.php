@@ -425,6 +425,13 @@ class UserPresenter extends Presenter
         return $this->fullName();
     }
 
+
+    public function jobtitle()
+    {
+        return $this->jobtitle ?? null;
+    }
+    
+
     /**
      * Returns the user Gravatar image url.
      *

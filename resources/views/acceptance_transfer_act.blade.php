@@ -98,7 +98,7 @@
                     <td>{{ $asset->asset_tag }}</td>
                     <td>{{ $asset->name }}</td>
                     <td>{{ $asset->serial }}</td>
-                    <td>{{ $asset->location }}</td>
+                    <td>{{ $asset->location->name }}</td>
                 </tr>
                 @endforeach
             </tbody>
@@ -120,7 +120,7 @@
             </div>
             <div class="signature-block">
                 <p>Equipment accepted by:</p>
-                <p>Position:  {{  $asset->assignedTo->present()->id }}</p>
+                <p>Position: </p>
                 <p>Full name:  {{ $asset->assignedTo->present()->name()}}</p>
                 <p>Signature: __________________</p>
             </div>

@@ -48,7 +48,7 @@
                 </td>
                 <td>
                   @if ($asset->assignedTo)
-                  {{ $asset->assignedTo->present()->name()}}
+                  {{ $asset->assignedTo->present()->name()}}                  
                   @endif
                 </td>
               </tr>
