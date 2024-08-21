@@ -33,6 +33,28 @@
         @endif
     </select>
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Получаем текущий URL
+    var currentUrl = window.location.href;
+
+    // Проверяем, содержит ли URL '/users/1#/asset'
+    if (!currentUrl.includes('#asset')) {
+        // Находим элемент <option> с value="generate_act"
+        var optionElement = document.querySelector('option[value="generate_act"]');
+        
+        // Если элемент найден, удаляем его
+        if (optionElement) {
+            optionElement.remove();
+        }
+    }
+});
+    </script>
+
+
     <button class="btn btn-primary" id="{{ (isset($id_button)) ? $id_button : 'bulkAssetEditButton' }}" disabled>{{ trans('button.go') }}</button>
+    
+    
     {{ Form::close() }}
 </div>
