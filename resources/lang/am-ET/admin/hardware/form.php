@@ -2,6 +2,7 @@
 
 return [
     'bulk_delete'		=> 'Confirm Bulk Delete Assets',
+    'bulk_generate_act' => 'Confirm Generete Act',
     'bulk_restore'      => 'Confirm Bulk Restore Assets', 
   'bulk_delete_help'	=> 'Review the assets for bulk deletion below. Once deleted, these assets can be restored, but they will no longer be associated with any users they are currently assigned to.',
   'bulk_restore_help'	=> 'Review the assets for bulk restoration below. Once restored, these assets will not be associated with any users they were previously assigned to.',
