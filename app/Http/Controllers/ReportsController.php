@@ -1011,6 +1011,24 @@ class ReportsController extends Controller
         return $response;
     }
 
+
+    public function postMakeAct(Request $request)
+{
+    ini_set('max_execution_time', env('REPORT_TIME_LIMIT', 12000)); //12000 seconds = 200 minutes
+    $this->authorize('reports.view');
+
+    \Debugbar::disable();
+    $customfields = CustomField::get();
+    $username = "";
+    if($request->filled()) {
+        $username = $request->input('username'); // Получаем значение поля username из запроса
+    }
+
+   
+
+    return null;
+}
+
     /**
      * getImprovementsReport
      *

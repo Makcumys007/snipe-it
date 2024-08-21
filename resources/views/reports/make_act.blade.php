@@ -40,22 +40,31 @@
               <br>
 
             
-            <label for=""> Найти пользователя:
-
-            </label>
-
+            <div class="form-group">
+              <label class="col-md-4 control-label">Найти пользователя:</label>
+              <div class="col-md-6">
+              <input class="form-control" type="text" name="username">              
+              </div>
+              <div class="col-md-2">
+              <button class="btn btn-primary pull-right">Найти</button>
+              </div>
+            </div>
+            
+            @if (!is_null($username))
+                <h1>Привет, {{ htmlspecialchars($username) }}!</h1>            
+            @endif
         
 
 
 
-        </div> <!-- /.box-body-->
+        </div> <!-- /.box-body--
         <div class="box-footer text-right">
           <button type="submit" class="btn btn-success">
             <i class="fas fa-download icon-white" aria-hidden="true"></i>
             {{ trans('general.generate') }}
           </button>
         </div>
-      </div> <!--/.box.box-default-->
+      </div> --/.box.box-default-->
     {{ Form::close() }}
   </div>
 </div>
