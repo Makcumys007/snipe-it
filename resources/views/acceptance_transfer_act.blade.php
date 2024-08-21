@@ -75,7 +75,10 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">KAZ Minerals</div>
+            <div class="logo"><img class="navbar-brand-img"
+                                             src="{{ Storage::disk('public')->url($snipeSettings->logo) }}"
+                                             alt="{{ $snipeSettings->site_name }} logo"></div>
+            
             <div class="date"><?php echo date('d.m.Y'); ?></div>
         </header>
         <h1>ACCEPTANCE-TRANSFER ACT №</h1>
