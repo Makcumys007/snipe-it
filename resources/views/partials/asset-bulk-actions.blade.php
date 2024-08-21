@@ -39,8 +39,11 @@
     // Получаем текущий URL
     var currentUrl = window.location.href;
 
-    // Проверяем, содержит ли URL '/users/1#/asset'
-    if (!currentUrl.includes('#asset')) {
+    // Регулярное выражение для проверки URL
+    var regex = /\/users\/\d+/;
+
+    // Проверяем, соответствует ли URL шаблону
+    if (!regex.test(currentUrl)) {
         // Находим элемент <option> с value="generate_act"
         var optionElement = document.querySelector('option[value="generate_act"]');
         
