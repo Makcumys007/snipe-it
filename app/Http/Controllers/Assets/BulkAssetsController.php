@@ -519,31 +519,27 @@ class BulkAssetsController extends Controller
      * @internal param array $assets
      * @since [v2.0]
      */
-    public function generate_act(Request $request) : RedirectResponse
-    {
-        $this->authorize('delete', Asset::class);
 
-        $bulk_back_url = route('hardware.index');
-        if ($request->session()->has('bulk_back_url')) {
-            $bulk_back_url = $request->session()->pull('bulk_back_url');
-        }
-
-        if ($request->filled('ids')) {
-            $assets = Asset::find($request->get('ids'));
-
-            $test = '';
-            foreach ($assets as $asset) {
-              //  $asset->delete();
-              $test = $test.$asset->id." ";
-            } // endforeach
-
-            //return redirect($bulk_back_url)->with('success', trans('admin/hardware/message.delete.success'));
-            return redirect($bulk_back_url)->with('success', trans($test));
-            // no values given, nothing to update
-        }
-
-        return redirect($bulk_back_url)->with('error', trans('admin/hardware/message.delete.nothing_updated'));
-    }
+     public function generate_act(Request $request)
+     {
+         $this->authorize('delete', Asset::class);
+     
+         $bulk_back_url = route('hardware.index');
+         if ($request->session()->has('bulk_back_url')) {
+             $bulk_back_url = $request->session()->pull('bulk_back_url');
+         }
+     
+         if ($request->filled('ids')) {
+             $assets = Asset::find($request->get('ids'));    
+             
+     
+             // Здесь вы можете передать данные в представление, если это необходимо
+             return response()->view('acceptance_transfer_act', ['assets' => $assets]);
+         }
+     
+         return redirect($bulk_back_url)->with('error', trans('admin/hardware/message.delete.nothing_updated'));
+     }
+    
 
     /**
      * Show Bulk Checkout Page
