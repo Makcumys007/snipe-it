@@ -120,7 +120,7 @@
             </div>
             <div class="signature-block">
                 <p>Equipment accepted by:</p>
-                <p>Position: </p>
+                <p>Position: {{ $asset->assignedTo->present()->jobtitle()}}</p>
                 <p>Full name:  {{ $asset->assignedTo->present()->name()}}</p>
                 <p>Signature: __________________</p>
             </div>

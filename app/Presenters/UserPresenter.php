@@ -415,6 +415,8 @@ class UserPresenter extends Presenter
         return html_entity_decode($this->first_name.' '.$this->last_name, ENT_QUOTES | ENT_XML1, 'UTF-8');
     }
 
+   
+
     /**
      * Standard accessor.
      * @TODO Remove presenter::fullName() entirely?
@@ -426,11 +428,20 @@ class UserPresenter extends Presenter
     }
 
 
-    public function jobtitle()
+    
+
+    public function userId()
     {
-        return $this->jobtitle ?? null;
+        return $this->id ?? null;
     }
     
+    public function jobtitle()
+    {
+        if($this->userId()){
+            return 0;
+        }
+        return FALSE;
+    }
 
     /**
      * Returns the user Gravatar image url.
