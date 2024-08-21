@@ -87,7 +87,7 @@
             <tbody>
                 @foreach ($assets as $asset)
                 <tr>
-                    <td>{{ $asset->id }}</td>
+                    <td>{{ $asset->asset_tag }}</td>
                     <td>{{ $asset->name }}</td>
                     <td>{{ $asset->serial }}</td>
                     <td>{{ $asset->location }}</td>
