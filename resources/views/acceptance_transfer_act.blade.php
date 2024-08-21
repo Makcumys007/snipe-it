@@ -88,8 +88,8 @@
                 @foreach ($assets as $asset)
                 <tr>
                     <td>{{ $asset->id }}</td>
-                    <td>{{ $asset->description }}</td>
-                    <td>{{ $asset->serial_number }}</td>
+                    <td>{{ $asset->name }}</td>
+                    <td>{{ $asset->serial }}</td>
                     <td>{{ $asset->location }}</td>
                 </tr>
                 @endforeach
