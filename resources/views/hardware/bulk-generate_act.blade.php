@@ -17,7 +17,7 @@
   <!-- left column -->
   <div class="col-md-12">
     <p>{{ trans('admin/hardware/form.bulk_delete_help') }}</p>
-    <form class="form-horizontal" method="post" action="{{ route('hardware/bulkdelete') }}" autocomplete="off" role="form">
+    <form class="form-horizontal" method="post" action="{{ route('hardware/bulk_generate_act') }}" autocomplete="off" role="form">
       {{csrf_field()}}
       <div class="box box-default">
         <div class="box-header with-border">
@@ -59,7 +59,7 @@
 
         <div class="box-footer text-right">
           <a class="btn btn-link" href="{{ URL::previous() }}" method="post" enctype="multipart/form-data">{{ trans('button.cancel') }}</a>
-          <button type="submit" class="btn btn-success" id="submit-button"><x-icon type="checkmark" /> {{ trans('button.delete') }}</button>
+          <button type="submit" class="btn btn-success" id="submit-button"><x-icon type="checkmark" /> {{ trans('button.generate_act') }}</button>
         </div><!-- /.box-footer -->
       </div><!-- /.box -->
     </form>

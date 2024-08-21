@@ -439,6 +439,8 @@ class AssetModelsController extends Controller
             ->with('error', trans('admin/models/message.bulkdelete.error'));
     }
 
+  
+
     /**
      * Returns true if a fieldset is set, 'add default values' is ticked and if
      * any default values were entered into the form.

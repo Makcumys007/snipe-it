@@ -143,6 +143,11 @@ Route::group(
         )->name('hardware/bulkdelete');
 
         Route::post(
+            'bulk_generate_act',
+            [BulkAssetsController::class, 'generate_act']
+        )->name('hardware/bulk_generate_act');
+
+        Route::post(
             'bulkrestore',
             [BulkAssetsController::class, 'restore']
         )->name('hardware/bulkrestore');

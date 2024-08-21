@@ -59,7 +59,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post(
             'bulkdelete',
             [LocationsController::class, 'postBulkDelete']
-        )->name('locations.bulkdelete.show');
+        )->name('locations.bulkdelete.show');        
 
         Route::post(
             'bulkedit',
