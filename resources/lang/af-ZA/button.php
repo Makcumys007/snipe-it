@@ -16,6 +16,7 @@ return [
     'select_file'				=> 'Kies lêer ...',
     'select_files'				=> 'Select Files...',
     'generate_labels'           => '{1} Generate Label|[2,*] Generate Labels',
+    'generate_act'              => 'Generate Asset Act',
     'send_password_link'        => 'Stuur wagwoord terugstel skakel',
     'go'                        => 'Go',
     'bulk_actions'              => 'Bulk Actions',
