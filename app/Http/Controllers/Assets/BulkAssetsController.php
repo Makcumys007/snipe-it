@@ -20,6 +20,7 @@ use App\Models\CustomField;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use App\Models\User;
 
 class BulkAssetsController extends Controller
 {
@@ -131,9 +132,9 @@ class BulkAssetsController extends Controller
                     return view('hardware/bulk-delete')->with('assets', $assets);
 
                 case 'generate_act':
-                    $this->authorize('delete', Asset::class);
+                    $this->authorize('generate_act', Asset::class);
                     $assets->each(function ($assets) {
-                        $this->authorize('delete', $assets);
+                        $this->authorize('generate_act', $assets);
                     });
 
                     return view('hardware/bulk-generate_act')->with('assets', $assets);
