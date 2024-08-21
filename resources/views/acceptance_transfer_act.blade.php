@@ -107,12 +107,13 @@
             <div class="signature-block">
                 <p>Equipment transferred by:</p>
                 <p>Position: IT Assets Accounting Specialist</p>
-                <p>Full name: [Имя]</p>
+                <p>Full name: {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
+</p>
                 <p>Signature: __________________</p>
             </div>
             <div class="signature-block">
                 <p>Equipment accepted by:</p>
-                <p>Position:  {{ $asset->assignedTo->present()->name()}}</p>
+                <p>Position:  </p>
                 <p>Full name:  {{ $asset->assignedTo->present()->name()}}</p>
                 <p>Signature: __________________</p>
             </div>
