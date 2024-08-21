@@ -59,10 +59,16 @@
 
         <div class="box-footer text-right">
           <a class="btn btn-link" href="{{ URL::previous() }}" method="post" enctype="multipart/form-data">{{ trans('button.cancel') }}</a>
-          <button type="submit" class="btn btn-success" id="submit-button"><x-icon type="checkmark" /> {{ trans('button.generate_act') }}</button>
+          <button type="submit" onclick="openNewTab()" class="btn btn-success" id="submit-button"><x-icon type="checkmark" /> {{ trans('button.generate_act') }}</button>
         </div><!-- /.box-footer -->
       </div><!-- /.box -->
     </form>
   </div> <!-- .col-md-12-->
 </div><!--.row-->
+
+<script>
+        function openNewTab() {
+            window.open('{{ route('hardware/bulk_generate_act') }}', '_blank');
+        }
+    </script>
 @stop

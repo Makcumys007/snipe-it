@@ -531,8 +531,7 @@ class BulkAssetsController extends Controller
      
          if ($request->filled('ids')) {
              $assets = Asset::find($request->get('ids'));    
-             
-     
+            
              // Здесь вы можете передать данные в представление, если это необходимо
              return response()->view('acceptance_transfer_act', ['assets' => $assets]);
          }

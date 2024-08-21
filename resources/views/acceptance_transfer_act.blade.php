@@ -68,7 +68,7 @@
     <div class="container">
         <header>
             <div class="logo">KAZ Minerals</div>
-            <div class="date">6/7/2024</div>
+            <div class="date"><?php echo date('d.m.Y'); ?></div>
         </header>
         <h1>ACCEPTANCE-TRANSFER ACT №</h1>
         <h2>АКТ приема-передачи №</h2>
