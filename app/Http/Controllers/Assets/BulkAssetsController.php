@@ -534,7 +534,9 @@ class BulkAssetsController extends Controller
              $assets = Asset::find($request->get('ids'));    
             
              // Здесь вы можете передать данные в представление, если это необходимо
-             return response()->view('acceptance_transfer_act', ['assets' => $assets]);
+             return response()->view('acceptance_transfer_act', [
+                'assets' => $assets
+            ]);
          }
      
          return redirect($bulk_back_url)->with('error', trans('admin/hardware/message.delete.nothing_updated'));
