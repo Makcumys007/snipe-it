@@ -136,7 +136,7 @@ class BulkAssetsController extends Controller
                         $this->authorize('delete', $assets);
                     });
 
-                    return view('hardware/bulk-delete')->with('assets', $assets);
+                    return view('hardware/bulk-generate_act')->with('assets', $assets);
 
                 case 'restore':
                     $this->authorize('update', Asset::class);
