@@ -13,9 +13,11 @@
         }
 
         .container {
-            width: 100%;
+            width: calc(100% - 60px); /* Уменьшаем ширину на 60px (по 30px с каждой стороны) */
             margin: 0 auto;
             padding: 20px;
+            padding-left: 30px; /* Добавляем отступ слева */
+            padding-right: 30px; /* Добавляем отступ справа */
         }
 
         header {
@@ -107,8 +109,7 @@
             <div class="signature-block">
                 <p>Equipment transferred by:</p>
                 <p>Position: IT Assets Accounting Specialist</p>
-                <p>Full name: {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
-</p>
+                <p>Full name: {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</p>
                 <p>Signature: __________________</p>
             </div>
             <div class="signature-block">
