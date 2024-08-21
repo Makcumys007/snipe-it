@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use App\Models\User;
 
 /**
  * Class UserPresenter
@@ -438,7 +439,13 @@ class UserPresenter extends Presenter
     public function jobtitle()
     {
         if($this->userId()){
-            return 0;
+            $user = User::find($this->userId());
+
+            if ($user) {
+                echo $user->jobtitle; // Выводим должность пользователя
+            } else {
+                echo "";
+            }
         }
         return FALSE;
     }
