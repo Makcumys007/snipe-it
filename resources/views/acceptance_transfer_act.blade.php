@@ -81,8 +81,8 @@
             
             <div class="date"><?php echo date('d.m.Y'); ?></div>
         </header>
-        <h1>ACCEPTANCE-TRANSFER ACT №</h1>
-        <h2>АКТ приема-передачи №</h2>
+        <h1>ACCEPTANCE-TRANSFER ACT</h1>
+        <h2>АКТ приема-передачи</h2>
         <p>KAZ Minerals Boashakol employee accepts the IT assets / equipment and signs this ACT confirming that the IT assets / equipment listed below have been transferred in full and were operational at the time of transfer.</p>
         <p>Сотрудник KAZ Minerals Borshakol принимает ИТ - активы / оборудование и подписывает настоящий Акт о том, что нижеследующие ИТ -активы / оборудование были переданы полностью и на момент передачи находились в исправном состоянии:</p>
         
