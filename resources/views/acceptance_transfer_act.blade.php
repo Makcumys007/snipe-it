@@ -99,7 +99,7 @@
                 @foreach ($assets as $asset)
                 <tr>
                 <td>{{ optional($asset)->asset_tag ?? '' }}</td>
-                <td>{{ optional($asset)->name ?? '' }}</td>
+                <td>{{ optional($asset)->model->name ?? '' }}</td>
                 <td>{{ optional($asset)->serial ?? '' }}</td>
                 <td>{{ optional($asset->location)->name ?? '' }}</td>
                 </tr>
