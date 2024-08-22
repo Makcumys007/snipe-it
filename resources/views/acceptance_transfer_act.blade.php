@@ -98,10 +98,10 @@
             <tbody>
                 @foreach ($assets as $asset)
                 <tr>
-                    <td>{{ $asset->asset_tag }}</td>
-                    <td>{{ $asset->name }}</td>
-                    <td>{{ $asset->serial }}</td>
-                    <td>{{ $asset->location->name }}</td>
+                <td>{{ optional($asset)->asset_tag ?? '' }}</td>
+                <td>{{ optional($asset)->name ?? '' }}</td>
+                <td>{{ optional($asset)->serial ?? '' }}</td>
+                <td>{{ optional($asset->location)->name ?? '' }}</td>
                 </tr>
                 @endforeach
             </tbody>

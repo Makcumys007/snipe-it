@@ -8,6 +8,7 @@ return [
   'bulk_restore_help'	=> 'Review the assets for bulk restoration below. Once restored, these assets will not be associated with any users they were previously assigned to.',
   'bulk_delete_warn'	=> 'You are about to delete :asset_count assets.',
   'bulk_restore_warn'	=> 'You are about to restore :asset_count assets.',
+  'bulk_generate_act_warn'    => 'You are about to generate act for an asset model.',
     'bulk_update'		=> 'Bulk Update Assets',
     'bulk_update_help'	=> 'This form allows you to update multiple assets at once. Only fill in the fields you need to change. Any fields left blank will remain unchanged. ',
     'bulk_update_warn'	=> 'You are about to edit the properties of a single asset.|You are about to edit the properties of :asset_count assets.',
