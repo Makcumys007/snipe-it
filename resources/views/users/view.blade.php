@@ -188,7 +188,26 @@
                   </a>
                 </div>
               @endcan
+              <div class="col-md-12" style="padding-top: 5px;">
+<!-- Print Act -->
+              <form action="{{ route('hardware/bulkedit') }}" method="post">
+              {{ csrf_field() }}
 
+              <!-- Писать здесб! -->
+              @if ($user->count() > 0)
+              {{$user->id}}
+
+              @endif
+              
+
+              
+              <input type="hidden" name="bulk_actions" value="generate_act">
+              
+              
+    <button style="width: 100%;" class="btn btn-sm btn-primary btn-social hidden-print"  ><x-icon type="print" />{{ trans('button.generate_act') }}</button>
+
+    </form>
+                </div>
                 @can('view', $user)
                 <div class="col-md-12" style="padding-top: 5px;">
                 @if($user->allAssignedCount() != '0') 
@@ -200,8 +219,7 @@
                   <button style="width: 100%;" class="btn btn-sm btn-primary hidden-print" rel="noopener" disabled title="{{ trans('admin/users/message.user_has_no_assets_assigned') }}">{{ trans('admin/users/general.print_assigned') }}</button>
                 @endif
                 </div>
-                @endcan
-
+                @endcan                
                 @can('view', $user)
                   <div class="col-md-12" style="padding-top: 5px;">
                   @if(!empty($user->email) && ($user->allAssignedCount() != '0'))

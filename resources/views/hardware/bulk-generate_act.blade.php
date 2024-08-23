@@ -28,7 +28,7 @@
           <table class="table table-striped table-condensed">
             <thead>
               <tr>
-                <td>!</td>
+                <td></td>
                 <td>{{ trans('admin/hardware/table.id') }}</td>
                 <td>{{ trans('general.asset_name') }}</td>
                 <td>{{ trans('admin/hardware/table.location')}}</td>

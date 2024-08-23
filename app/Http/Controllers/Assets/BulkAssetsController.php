@@ -515,10 +515,10 @@ class BulkAssetsController extends Controller
     /**
      * Save bulk generate_act.
      *
-     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @author [M.Abylkassov] [<m.abylkassov@gmail.com>]
      * @param Request $request
      * @internal param array $assets
-     * @since [v2.0]
+     * @since [v1.0]
      */
 
      public function generate_act(Request $request)
