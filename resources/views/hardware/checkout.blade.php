@@ -63,18 +63,22 @@
                             </div>
                         </div>
 
+                        <!-- Number Of Request 
+                    Нужно еще редактировать
+                    -->
+
+
+                        <div class="form-group">
+    <label for="omni_request" class="col-md-3 control-label">
+        {{ trans('admin/hardware/form.omni_request') }}
+    </label>
+    <div class="col-md-8{{ (Helper::checkIfRequired($asset, 'omni_request')) ? ' required' : '' }}">
+        <input class="form-control" type="text" name="omni_request" id="omni_request"  required>
+        {!! $errors->first('omni_request', '<span class="alert-msg"><i class="fas fa-times"></i> :message</span>') !!}
+    </div>
+</div>
                         <!-- Asset Name -->
                         <div class="form-group {{ $errors->has('name') ? 'error' : '' }}">
-                            <label for="omni_request" class="col-md-3 control-label">
-                                {{ trans('admin/hardware/form.omni_request') }}
-                            </label>
-                            <div class="col-md-8">
-                                <input class="form-control" type="text" name="omni_request" id="name"
-                                        tabindex="1" required>
-                            </div>                            
-                        </div>
-                        <!-- Number Of Request -->
-                        <div class="form-group }}">
                             <label for="name" class="col-md-3 control-label">
                                 {{ trans('admin/hardware/form.name') }}
                             </label>
