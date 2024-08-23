@@ -66,17 +66,17 @@
                         <!-- Asset Name -->
                         <div class="form-group {{ $errors->has('name') ? 'error' : '' }}">
                             <label for="omni_request" class="col-md-3 control-label">
-                                {{ trans('admin/hardware/form.name') }}
+                                {{ trans('admin/hardware/form.omni_request') }}
                             </label>
                             <div class="col-md-8">
                                 <input class="form-control" type="text" name="omni_request" id="name"
-                                        tabindex="1">
+                                        tabindex="1" required>
                             </div>                            
                         </div>
                         <!-- Number Of Request -->
                         <div class="form-group }}">
                             <label for="name" class="col-md-3 control-label">
-                                {{ trans('admin/hardware/form.omni_request') }}
+                                {{ trans('admin/hardware/form.name') }}
                             </label>
                             <div class="col-md-8">
                                 <input class="form-control" type="text" name="name" id="name"
