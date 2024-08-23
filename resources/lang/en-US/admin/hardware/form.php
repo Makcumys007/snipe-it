@@ -37,6 +37,7 @@ return [
     'model'				=> 'Model',
     'months'			=> 'months',
     'name'				=> 'Asset Name',
+    'omni_request'  => 'Request number',
     'notes'				=> 'Notes',
     'order'				=> 'Order Number',
     'qr'				=> 'QR Code',

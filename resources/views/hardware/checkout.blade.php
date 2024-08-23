@@ -65,19 +65,18 @@
 
                         <!-- Asset Name -->
                         <div class="form-group {{ $errors->has('name') ? 'error' : '' }}">
-                            <label for="name" class="col-md-3 control-label">
+                            <label for="omni_request" class="col-md-3 control-label">
                                 {{ trans('admin/hardware/form.name') }}
                             </label>
                             <div class="col-md-8">
-                                <input class="form-control" type="text" name="name" id="name"
-                                       value="{{ old('name', $asset->name) }}" tabindex="1">
-                                {!! $errors->first('name', '<span class="alert-msg" aria-hidden="true"><i class="fas fa-times" aria-hidden="true"></i> :message</span>') !!}
+                                <input class="form-control" type="text" name="omni_request" id="name"
+                                        tabindex="1">
                             </div>                            
                         </div>
                         <!-- Number Of Request -->
                         <div class="form-group }}">
                             <label for="name" class="col-md-3 control-label">
-                                {{ trans('admin/hardware/form.name') }}
+                                {{ trans('admin/hardware/form.omni_request') }}
                             </label>
                             <div class="col-md-8">
                                 <input class="form-control" type="text" name="name" id="name"
