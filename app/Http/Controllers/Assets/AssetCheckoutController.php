@@ -91,6 +91,10 @@ class AssetCheckoutController extends Controller
                 $asset->status_id = $request->get('status_id');
             }
 
+            if ($request->filled('omni_request')) {
+                $asset->omni_request = $request->get('omni_request');
+            }
+
             if(!empty($asset->licenseseats->all())){
                 if(request('checkout_to_type') == 'user') {
                     foreach ($asset->licenseseats as $seat){
