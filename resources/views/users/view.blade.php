@@ -189,16 +189,23 @@
                 </div>
               @endcan
               <div class="col-md-12" style="padding-top: 5px;">
-<!-- Print Act -->
+<!-- Print Act
+Added by M.Abylkassov
+23.08.2024
+-->
               <form action="{{ route('hardware/bulkedit') }}" method="post">
-              {{ csrf_field() }}
-
-              <!-- Писать здесб! -->
-              @if ($user->count() > 0)
-              {{$user->id}}
-
-              @endif
+              {{ csrf_field() }}           
+             
               
+              @foreach(\App\Models\Asset::all() AS $asset)
+
+
+              @if($asset->assigned_to == $user->id)
+                  
+                  <input type="hidden" name="ids[]" value="{{$asset->id}}">
+              @endif
+
+              @endforeach
 
               
               <input type="hidden" name="bulk_actions" value="generate_act">
