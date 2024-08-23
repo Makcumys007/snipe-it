@@ -211,7 +211,7 @@ Added by M.Abylkassov
               <input type="hidden" name="bulk_actions" value="generate_act">
               
               
-    <button style="width: 100%;" class="btn btn-sm btn-primary btn-social hidden-print"  ><x-icon type="print" />{{ trans('button.generate_act') }}</button>
+    <button style="width: 100%;" class="btn btn-sm btn-success btn-social hidden-print"  ><x-icon type="print" />{{ trans('button.generate_act') }}</button>
 
     </form>
                 </div>
