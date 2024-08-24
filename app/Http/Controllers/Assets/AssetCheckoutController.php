@@ -67,9 +67,16 @@ class AssetCheckoutController extends Controller
             }
             $this->authorize('checkout', $asset);
 
+            $request->validate([
+                'omni_request' => 'required',
+            ], [
+                'omni_request.required' => 'Поле не должно быть пустым',
+            ]);
+
             if (!$asset->model) {
                 return redirect()->route('hardware.show', $asset->id)->with('error', trans('admin/hardware/general.model_invalid_fix'));
             }
+
 
             $admin = auth()->user();
 
