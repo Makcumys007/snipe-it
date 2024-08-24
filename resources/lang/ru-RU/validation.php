@@ -147,6 +147,7 @@ return [
     'required_with_all' => 'The :attribute field is required when :values are present.',
     'required_without' => ':attribute обязательное поле, когда отсутствует :values.',
     'required_without_all' => 'Поле атрибута: требуется, если ни один из: значений не присутствует.',
+    'omni_request_required' => 'Укажите номер заявки по которой вы выдает актив! (Из OMNITRACKER)',
     'same' => 'The :attribute field must match :other.',
     'size' => [
         'array' => 'The :attribute field must contain :size items.',

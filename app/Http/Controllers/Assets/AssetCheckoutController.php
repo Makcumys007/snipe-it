@@ -70,7 +70,7 @@ class AssetCheckoutController extends Controller
             $request->validate([
                 'omni_request' => 'required',
             ], [
-                'omni_request.required' => 'Поле не должно быть пустым',
+                'omni_request.required' => trans('validation.omni_request_required'),
             ]);
 
             if (!$asset->model) {
