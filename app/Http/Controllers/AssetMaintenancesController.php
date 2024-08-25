@@ -286,4 +286,24 @@ class AssetMaintenancesController extends Controller
 
         return view('asset_maintenances/view')->with('assetMaintenance', $assetMaintenance);
     }
+
+
+    public function technical_inspection(Request $request,$asset_id)
+    {
+
+
+        $this->authorize('update', Asset::class);
+        $asset = Asset::find($asset_id);
+
+        // Prepare Asset Maintenance Type List
+        $assetMaintenanceType = [
+                                    '' => 'Select an asset maintenance type',
+                                ] + AssetMaintenance::getImprovementOptions();
+        // Mark the selected asset, if it came in
+
+        return view('asset_maintenances/technical_inspection')
+                   ->with('asset', $asset)
+                   ->with('assetMaintenanceType', $assetMaintenanceType)
+                   ->with('item', new AssetMaintenance);
+    }
 }
