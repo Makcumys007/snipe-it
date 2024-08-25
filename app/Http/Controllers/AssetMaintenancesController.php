@@ -97,6 +97,7 @@ class AssetMaintenancesController extends Controller
         $assetMaintenance->is_warranty = $request->input('is_warranty');
         $assetMaintenance->cost = $request->input('cost');
         $assetMaintenance->notes = $request->input('notes');
+        $assetMaintenance->solution = $request->input('solution');
         $asset = Asset::find($request->input('asset_id'));
 
         if ((! Company::isCurrentUserHasAccess($asset)) && ($asset != null)) {
@@ -192,7 +193,7 @@ class AssetMaintenancesController extends Controller
         $assetMaintenance->is_warranty = $request->input('is_warranty');
         $assetMaintenance->cost =  $request->input('cost');
         $assetMaintenance->notes = $request->input('notes');
-
+        $assetMaintenance->solution = $request->input('solution');
         $asset = Asset::find(request('asset_id'));
 
         if (! Company::isCurrentUserHasAccess($asset)) {
@@ -288,22 +289,5 @@ class AssetMaintenancesController extends Controller
     }
 
 
-    public function technical_inspection(Request $request,$asset_id)
-    {
-
-
-        $this->authorize('update', Asset::class);
-        $asset = Asset::find($asset_id);
-
-        // Prepare Asset Maintenance Type List
-        $assetMaintenanceType = [
-                                    '' => 'Select an asset maintenance type',
-                                ] + AssetMaintenance::getImprovementOptions();
-        // Mark the selected asset, if it came in
-
-        return view('asset_maintenances/technical_inspection')
-                   ->with('asset', $asset)
-                   ->with('assetMaintenanceType', $assetMaintenanceType)
-                   ->with('item', new AssetMaintenance);
-    }
+    
 }

@@ -1,6 +1,7 @@
 <?php
 
     return [
+        'technical_inspection'     => 'Create a technical inspection report',
         'asset_maintenances' => 'Asset Maintenances',
         'edit'               => 'Edit Asset Maintenance',
         'delete'             => 'Delete Asset Maintenance',
@@ -14,3 +15,4 @@
         'configuration_change'   => 'Configuration Change',
         'pat_test'           => 'PAT Test',
     ];
+    

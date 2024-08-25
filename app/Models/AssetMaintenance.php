@@ -34,6 +34,7 @@ class AssetMaintenance extends Model implements ICompanyableChild
         'completion_date'        => 'date_format:Y-m-d|nullable',
         'notes'                  => 'string|nullable',
         'cost'                   => 'numeric|nullable',
+        'solution'               => 'string|nullable',
     ];
 
 
@@ -100,6 +101,8 @@ class AssetMaintenance extends Model implements ICompanyableChild
     public static function getImprovementOptions()
     {
         return [
+            trans('admin/asset_maintenances/general.technical_inspection') => trans('admin/asset_maintenances/general.technical_inspection'),
+            trans('admin/asset_maintenances/general.asset_maintenances') => trans('admin/asset_maintenances/general.asset_maintenances'),
             trans('admin/asset_maintenances/general.maintenance') => trans('admin/asset_maintenances/general.maintenance'),
             trans('admin/asset_maintenances/general.repair')      => trans('admin/asset_maintenances/general.repair'),
             trans('admin/asset_maintenances/general.upgrade')     => trans('admin/asset_maintenances/general.upgrade'),

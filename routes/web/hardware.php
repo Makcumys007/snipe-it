@@ -36,11 +36,7 @@ Route::group(
         Route::resource('maintenances', 
             AssetMaintenancesController::class, [
             'parameters' => ['maintenance' => 'maintenance_id', 'asset' => 'asset_id'],
-        ]);
-
-        Route::get('technical_inspection/{id}',
-            [AssetMaintenancesController::class, 'technical_inspection']
-        )->name('technical_inspection.create');
+        ]);       
 
         Route::get('requested', [
             AssetsController::class, 'getRequestedIndex']

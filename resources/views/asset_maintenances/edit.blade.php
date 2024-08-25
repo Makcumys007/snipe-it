@@ -48,7 +48,7 @@
         <!-- Title -->
         <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
           <label for="title" class="col-md-3 control-label">
-            {{ trans('admin/asset_maintenances/form.title') }}
+            {{ trans('admin/asset_maintenances/form.condition') }}
           </label>
           <div class="col-md-7{{  (Helper::checkIfRequired($item, 'title')) ? ' required' : '' }}">
             <input class="form-control" type="text" name="title" id="title" value="{{ old('title', $item->title) }}" />
@@ -117,6 +117,15 @@
           <label for="notes" class="col-md-3 control-label">{{ trans('admin/asset_maintenances/form.notes') }}</label>
           <div class="col-md-7">
             <textarea class="col-md-6 form-control" id="notes" name="notes">{{ old('notes', $item->notes) }}</textarea>
+            {!! $errors->first('notes', '<span class="alert-msg" aria-hidden="true"><i class="fas fa-times" aria-hidden="true"></i> :message</span>') !!}
+          </div>
+        </div>
+
+        <!-- Solution -->
+        <div class="form-group {{ $errors->has('notes') ? ' has-error' : '' }}">
+          <label for="notes" class="col-md-3 control-label">{{ trans('admin/asset_maintenances/form.solution') }}</label>
+          <div class="col-md-7">
+            <textarea class="col-md-6 form-control" id="solution" name="solution">{{ old('solution', $item->solution) }}</textarea>
             {!! $errors->first('notes', '<span class="alert-msg" aria-hidden="true"><i class="fas fa-times" aria-hidden="true"></i> :message</span>') !!}
           </div>
         </div>

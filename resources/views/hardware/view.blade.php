@@ -217,7 +217,7 @@
                                <!-- Create a technical inspection report -->
 
                                     <div class="col-md-12 hidden-print" style="padding-top: 5px;">
-                                        <a href="{{ route('technical_inspection.create', $asset->id) }}" class="btn btn-sm btn-success btn-block btn-social hidden-print" style="color: white;">
+                                        <a href="{{ route('maintenances.create', ['asset_id' => $asset->id]) }}" class="btn btn-sm btn-success btn-block btn-social hidden-print" style="color: white;">
                                             <x-icon type="audit" />
                                             {{ trans('admin/hardware/general.create_a_technical_inspection_report') }}
                                         </a>

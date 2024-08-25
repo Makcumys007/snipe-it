@@ -1,6 +1,7 @@
 <?php
 
     return [
+        'technical_inspection'     => 'Создать акт технического осмотра',
         'asset_maintenances' => 'Обслуживание',
         'edit'               => 'Редактировать',
         'delete'             => 'Удалить',
@@ -13,4 +14,5 @@
         'hardware_support'   => 'Аппаратная поддержка',
         'configuration_change'   => 'Изменение конфигурации',
         'pat_test'           => 'Тест ЭБ',
+        
     ];
