@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'create_a_technical_inspection_report' => 'Create_a_technical_inspection_report',
     'about_assets_title'           => 'About Assets',
     'about_assets_text'            => 'Assets are items tracked by serial number or asset tag.  They tend to be higher value items where identifying a specific item matters.',
     'archived'  				=> 'Archived',

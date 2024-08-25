@@ -162,6 +162,7 @@
                             @endif
 
                             <!-- Start button column -->
+                            
                             <div class="col-md-3 col-xs-12 col-sm-push-9">
 
                                 <div class="col-md-12 text-center">
@@ -175,7 +176,7 @@
                                         <!-- generic image goes here -->
                                     @endif
                                 </div>
-
+                                
 
                                 @if ($asset->deleted_at=='')
                                     @can('update', $asset)
@@ -213,7 +214,14 @@
                                         @endcan
                                     @endif
                                 @endif
-
+                               <!-- Акт технического осмотра -->
+                                    <div class="col-md-12 hidden-print" style="padding-top: 5px;">
+                                        <a href="{{ route('clone/hardware', $asset->id) }}" class="btn btn-sm btn-success btn-block btn-social hidden-print" style="color: white;">
+                                            <x-icon type="audit" />
+                                            {{ trans('admin/hardware/general.create_a_technical_inspection_report') }}
+                                        </a>
+                                    </div>
+                               
 
 
                                     @can('audit', \App\Models\Asset::class)
@@ -236,6 +244,7 @@
                                         </a>
                                     </div>
                                 @endcan
+                                
 
                                 @can('delete', $asset)
                                     <div class="col-md-12 hidden-print" style="padding-top: 30px; padding-bottom: 30px;">
