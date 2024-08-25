@@ -105,6 +105,11 @@ class AssetMaintenancesPresenter extends Presenter
                 'sortable' => true,
                 'title' => trans('admin/asset_maintenances/form.notes'),
             ], [
+                'field' => 'solution',
+                'searchable' => true,
+                'sortable' => true,
+                'title' => trans('admin/asset_maintenances/form.solution'),
+            ], [
                 'field' => 'is_warranty',
                 'searchable' => true,
                 'sortable' => true,
