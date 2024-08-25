@@ -405,6 +405,7 @@ return [
     'accessory_information' => 'Информация об аксессуаре:',
     'accessory_name'       => 'Название аксессуара:',
     'clone_item'            => 'Клонировать позицию',
+    'print_technical_inspection'            => 'Печатать акт техничекого осмотра',
     'checkout_tooltip' => 'Выдать этот элемент',
     'checkin_tooltip' => 'Check this item in so that it is available for re-issue, re-imaging, etc',
     'checkout_user_tooltip' => 'Выдать эту единицу пользователю',

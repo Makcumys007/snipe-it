@@ -30,6 +30,9 @@ class AssetMaintenance extends Model implements ICompanyableChild
         'asset_maintenance_type' => 'required',
         'title'                  => 'required|max:100',
         'is_warranty'            => 'boolean',
+
+        // is_technical_inspection added
+        'is_technical_inspection'            => 'boolean',
         'start_date'             => 'required|date_format:Y-m-d',
         'completion_date'        => 'date_format:Y-m-d|nullable',
         'notes'                  => 'string|nullable',

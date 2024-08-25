@@ -68,6 +68,7 @@ return [
     'city'  				=> 'City',
     'click_here'			=> 'Click here',
     'clear_selection'		=> 'Clear Selection',
+    'print_technical_inspection'            => 'Print technical inspection',
     'companies'			    => 'Companies',
     'company'				=> 'Company',
     'component'			    => 'Component',

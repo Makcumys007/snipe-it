@@ -301,6 +301,10 @@
             if ((row.available_actions) && (row.available_actions.clone === true)) {
                 actions += '<a href="{{ config('app.url') }}/' + dest + '/' + row.id + '/clone" class="actions btn btn-sm btn-info" data-tooltip="true" title="{{ trans('general.clone_item') }}"><x-icon type="clone" /><span class="sr-only">{{ trans('general.clone_item') }}</span></a>&nbsp;';
             }
+            // print_technical_inspection
+            if ((row.available_actions) && (row.available_actions.print_technical_inspection === true)) {
+                actions += '<a href="{{ config('app.url') }}/' + dest + '/' + row.id + '/print_technical_inspection" class="actions btn btn-sm btn-info" data-tooltip="true" title="{{ trans('general.print_technical_inspection') }}"><x-icon type="print" /><span class="sr-only">{{ trans('general.print_technical_inspection') }}</span></a>&nbsp;';
+            }
 
             if ((row.available_actions) && (row.available_actions.update === true)) {
                 actions += '<a href="{{ config('app.url') }}/' + dest + '/' + row.id + '/edit" class="actions btn btn-sm btn-warning" data-tooltip="true" title="{{ trans('general.update') }}"><x-icon type="edit" /><span class="sr-only">{{ trans('general.update') }}</span></a>&nbsp;';
