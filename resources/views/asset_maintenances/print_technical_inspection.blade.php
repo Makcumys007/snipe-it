@@ -84,7 +84,7 @@
                 <td>{{ optional($asset)->name ?? '' }}</td>
                 <td>{{ optional($asset)->asset_tag ?? '' }}</td>
                 <td>{{ optional($asset)->serial ?? '' }}</td>
-                <td></td>
+                <td>{{ $date_of_commissioning }}</td>
                 <td>{{ optional($assetMaintenance)->title ?? '' }}</td>
             </tr>
         </table>

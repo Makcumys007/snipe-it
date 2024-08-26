@@ -60,12 +60,14 @@ class AssetMaintenancesController extends Controller
             // We have to set this so that the correct property is set in the select2 ajax dropdown
             $asset = Asset::find($assetMaintenance->asset_id);
             $support = User::find($assetMaintenance->user_id);      
-            $start_date = Carbon::parse($assetMaintenance->start_date)->format('d.m.Y');      
+            $start_date = Carbon::parse($assetMaintenance->start_date)->format('d.m.Y');  
+            $date_of_commissioning = Carbon::parse($asset->date_of_commissioning)->format('d.m.Y');     
             return view('asset_maintenances/print_technical_inspection', [
                 'asset' => $asset,
                 'assetMaintenance' => $assetMaintenance,
                 'support' => $support,
-                'start_date' => $start_date
+                'start_date' => $start_date,
+                'date_of_commissioning' => $date_of_commissioning
             ]);
         } else {
             return view('asset_maintenances/index');
