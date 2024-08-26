@@ -126,7 +126,8 @@ class Asset extends Depreciable
         'assigned_location' => ['nullable', 'exists:locations,id,deleted_at,NULL'],
         'assigned_asset'    => ['nullable', 'exists:assets,id,deleted_at,NULL'],
         //Added by M.Abylkassov
-        'omni_request'      => ['nullable', 'min:1', 'max:45', 'not_array']
+        'omni_request'      => ['nullable', 'min:1', 'max:45', 'not_array'],
+        'date_of_commissioning'     => ['nullable', 'date', 'date_format:Y-m-d'],
 
     ];
 

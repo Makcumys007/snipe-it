@@ -206,6 +206,7 @@ return [
     'new_password'          => 'Новый пароль',
     'next'					=> 'Далее',
     'next_audit_date'		=> 'Следующая дата аудита',
+    'date_of_commissioning'	=> 'Дата ввода в эксплуатацию',
     'next_audit_date_help'  => 'If you use auditing in your organization, this is usually automatically calculated based on the asset&apos;s last audit date and audit frequency (in <code>Admin Settings &gt; Alerts</code>) and you can leave this blank. You can manually set this date here if you need to, but it must be later than the last audit date. ',
     'audit_images_help'     => 'You can find audit images in the asset\'s history tab.',
     'no_email'              => 'Нет адреса электронной почты, связанные с этим пользователем',

@@ -18,7 +18,7 @@
 @section('inputFields')
     
     @include ('partials.forms.edit.company-select', ['translated_name' => trans('general.company'), 'fieldname' => 'company_id'])
-
+    
 
   <!-- Asset Tag -->
   <div class="form-group {{ $errors->has('asset_tag') ? ' has-error' : '' }}">
@@ -68,7 +68,24 @@
         <!-- This is an asset and it's currently deployed, so let them edit the expected checkin date -->
         @include ('partials.forms.edit.datepicker', ['translated_name' => trans('admin/hardware/form.expected_checkin'),'fieldname' => 'expected_checkin'])
     @endif
+    <div class="form-group{{ $errors->has('date_of_commissioning') ? ' has-error' : '' }}">
 
+                <label class="col-md-3 control-label">
+                    {{ trans('general.date_of_commissioning') }}
+                </label>
+
+                <div class="input-group col-md-4">
+                    <div class="input-group date" data-provide="datepicker" data-date-clear-btn="true" data-date-format="yyyy-mm-dd"  data-autoclose="true">
+                        <input type="text" class="form-control" placeholder="{{ trans('general.select_date') }}" name="date_of_commissioning" id="date_of_commissioning" value="{{ old('date_of_commissioning', $item->date_of_commissioning) }}" readonly style="background-color:inherit" maxlength="10">
+                        <span class="input-group-addon"><x-icon type="calendar" /></span>
+                    </div>
+                </div>
+                <div class="col-md-8 col-md-offset-3">
+                    {!! $errors->first('date_of_commissioning', '<span class="alert-msg" aria-hidden="true"><i class="fas fa-times" aria-hidden="true"></i> :message</span>') !!}
+                    <p class="help-block">{!! trans('general.date_of_commissioning') !!}</p>
+                </div>
+
+            </div>
     @include ('partials.forms.edit.notes')
     @include ('partials.forms.edit.location-select', ['translated_name' => trans('admin/hardware/form.default_location'), 'fieldname' => 'rtd_location_id', 'help_text' => trans('general.rtd_location_help')])
     @include ('partials.forms.edit.requestable', ['requestable_text' => trans('admin/hardware/general.requestable')])
