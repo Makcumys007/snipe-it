@@ -43,6 +43,8 @@
         }
         .signatures {
             margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
         }
         .signatures div {
             margin-bottom: 20px;
@@ -64,10 +66,12 @@
     </div>
     <div class="content">
         <p class="right-align">ТОО «Казминералс Бозшаколь»</p>
-        <p class="right-align">Утверждаю: Аужанов А.Т.</p>
+        <p class="right-align">ФИО/подпись ________________/___________</p>
         <p class="right-align">Начальник отдела информационных технологий</p>
-        <p class="right-align">24 августа 2024</p>
-        <p>Я, ниже подписавшийся Абылкасов М.А., инженер по промышленной связи, составил настоящий акт о том, что для диагностики представлено следующее оборудование:</p>
+        <p class="right-align">{{ optional($assetMaintenance)->start_date ?? ''}}</p>
+        <br>
+        <br>
+        <p>Я, ниже подписавшийся <span class="bold-underline">{{ optional($support)->first_name ?? '' }} {{ optional($support)->last_name ?? '' }}, {{ optional($support)->jobtitle ?? '' }}</span>, составил настоящий акт о том, что для диагностики представлено следующее оборудование:</p>
         <table class="table">
             <tr>
                 <th>Наименование</th>
@@ -84,13 +88,15 @@
                 <td>{{ optional($assetMaintenance)->title ?? '' }}</td>
             </tr>
         </table>
+        <br>
+        <br>
         <p>После произведенной диагностики установлено, что: </p>
         <p class="bold-underline">{{ optional($assetMaintenance)->notes ?? ''}}</p>
         <p>Заключение: </p>
         <p class="bold-underline">{{ optional($assetMaintenance)->solution ?? ''}}</p>
     </div>
     <div class="signatures">
-        <div><p class="bold-underline">Инженер по промышленной связи: <span class="right-align">___________________ {{ optional($support)->first_name ?? '' }}</span></p></div>
+        <span class="bold-underline">{{ optional($support)->jobtitle ?? '' }}:</span> <span class="right-align">___________________ {{ optional($support)->first_name ?? '' }} {{ optional($support)->last_name ?? '' }}</span>
     </div>
 </body>
 </html>
