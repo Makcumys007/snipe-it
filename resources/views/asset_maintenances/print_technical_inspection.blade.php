@@ -68,7 +68,7 @@
         <p class="right-align">ТОО «Казминералс Бозшаколь»</p>
         <p class="right-align">ФИО/подпись ________________/___________</p>
         <p class="right-align">Начальник отдела информационных технологий</p>
-        <p class="right-align">{{ optional($assetMaintenance)->start_date ?? ''}}</p>
+        <p class="right-align">{{ $start_date }}</p>
         <br>
         <br>
         <p>Я, ниже подписавшийся <span class="bold-underline">{{ optional($support)->first_name ?? '' }} {{ optional($support)->last_name ?? '' }}, {{ optional($support)->jobtitle ?? '' }}</span>, составил настоящий акт о том, что для диагностики представлено следующее оборудование:</p>
