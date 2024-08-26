@@ -47,6 +47,11 @@
         .signatures div {
             margin-bottom: 20px;
         }
+
+        .bold-underline {
+            font-weight: bold;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -72,18 +77,20 @@
                 <th>Состояние</th>
             </tr>
             <tr>
-                <td>{{$id}}</td>
-                <td>10002666</td>
-                <td>CND533623H</td>
-                <td>17.03.2016</td>
-                <td>Потертости</td>
+                <td>{{ optional($asset)->name ?? '' }}</td>
+                <td>{{ optional($asset)->asset_tag ?? '' }}</td>
+                <td>{{ optional($asset)->serial ?? '' }}</td>
+                <td></td>
+                <td>{{ optional($assetMaintenance)->title ?? '' }}</td>
             </tr>
         </table>
-        <p>После произведенной диагностики установлено, что основные компоненты ноутбука (процессор, оперативная память, жесткий диск) устарели и не соответствуют требованиям современных программ и операционных систем. Рекомендуется осуществить списание и утилизацию устройства в соответствии с установленными процедурами.</p>
-        <p>Заключение: Образец заключения</p>
+        <p>После произведенной диагностики установлено, что: </p>
+        <p class="bold-underline">{{ optional($assetMaintenance)->notes ?? ''}}</p>
+        <p>Заключение: </p>
+        <p class="bold-underline">{{ optional($assetMaintenance)->solution ?? ''}}</p>
     </div>
     <div class="signatures">
-        <div>Инженер по промышленной связи: Абылкасов М.А. (подпись)</div>
+        <div><p class="bold-underline">Инженер по промышленной связи: <span class="right-align">___________________ {{ optional($support)->first_name ?? '' }}</span></p></div>
     </div>
 </body>
 </html>

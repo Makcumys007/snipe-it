@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Asset;
+use App\Models\User;
 use App\Models\AssetMaintenance;
 use App\Models\Company;
 use Illuminate\Support\Facades\Auth;
@@ -54,11 +55,15 @@ class AssetMaintenancesController extends Controller
     public function printTechnicalInspection($id)
     {
         $this->authorize('view', Asset::class);
-        $asset = null;
-        if ($asset = Asset::find($id)) {
+        
+        if ($assetMaintenance = AssetMaintenance::find($id)) {
             // We have to set this so that the correct property is set in the select2 ajax dropdown
+            $asset = Asset::find($assetMaintenance->asset_id);
+            $support = User::find($assetMaintenance->user_id);
             return view('asset_maintenances/print_technical_inspection', [
-                'id' => $id
+                'asset' => $asset,
+                'assetMaintenance' => $assetMaintenance,
+                'support' => $support
             ]);
         } else {
             return view('asset_maintenances/index');
