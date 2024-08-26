@@ -38,6 +38,10 @@ Route::group(
             'parameters' => ['maintenance' => 'maintenance_id', 'asset' => 'asset_id'],
         ]);       
 
+        Route::get('maintenances/{id}/print',
+            [AssetMaintenancesController::class, 'printTechnicalInspection']
+        )->name('maintenances.print');
+
         Route::get('requested', [
             AssetsController::class, 'getRequestedIndex']
         )->name('assets.requested');

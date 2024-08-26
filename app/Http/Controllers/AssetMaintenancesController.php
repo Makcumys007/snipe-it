@@ -33,6 +33,7 @@ class AssetMaintenancesController extends Controller
           ->with('error', trans('general.insufficient_permissions'));
     }
 
+    
     /**
     *  Returns a view that invokes the ajax tables which actually contains
     * the content for the asset maintenances listing, which is generated in getDatatable.
@@ -47,6 +48,23 @@ class AssetMaintenancesController extends Controller
     {
         $this->authorize('view', Asset::class);
         return view('asset_maintenances/index');
+    }
+
+
+    public function printTechnicalInspection($id)
+    {
+        $this->authorize('view', Asset::class);
+        $asset = null;
+        if ($asset = Asset::find($id)) {
+            // We have to set this so that the correct property is set in the select2 ajax dropdown
+            return view('asset_maintenances/print_technical_inspection', [
+                'id' => $id
+            ]);
+        } else {
+            return view('asset_maintenances/index');
+        }
+
+       
     }
 
     /**
@@ -297,7 +315,5 @@ class AssetMaintenancesController extends Controller
 
         return view('asset_maintenances/view')->with('assetMaintenance', $assetMaintenance);
     }
-
-
     
 }
