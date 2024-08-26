@@ -974,7 +974,18 @@
                                             </div>
                                         </div>
                                     @endif
-
+                                    @if ($asset->date_of_commissioning!='')
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <strong>
+                                                    {{ trans('general.date_of_commissioning') }}
+                                                </strong>
+                                            </div>
+                                            <div class="col-md-9">
+                                                {{ Helper::getFormattedDateObject($asset->date_of_commissioning, 'date', false) }}
+                                            </div>
+                                        </div>
+                                    @endif
                                     @if ($asset->created_at!='')
                                         <div class="row">
                                             <div class="col-md-3">
