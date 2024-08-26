@@ -15,7 +15,7 @@
             align-items: center;
         }
         .header img {
-            width: 100px;
+            width: 150px;
         }
         .title {
             text-align: center;
@@ -90,10 +90,10 @@
         </table>
         <br>
         <br>
-        <p>После произведенной диагностики установлено, что: </p>
-        <p class="bold-underline">{{ optional($assetMaintenance)->notes ?? ''}}</p>
-        <p>Заключение: </p>
-        <p class="bold-underline">{{ optional($assetMaintenance)->solution ?? ''}}</p>
+        <p class="bold-underline">После произведенной диагностики установлено, что: </p>
+        <p >{{ optional($assetMaintenance)->notes ?? ''}}</p>
+        <p class="bold-underline">Заключение: </p>
+        <p >{{ optional($assetMaintenance)->solution ?? ''}}</p>
     </div>
     <div class="signatures">
         <span class="bold-underline">{{ optional($support)->jobtitle ?? '' }}:</span> <span class="right-align">___________________ {{ optional($support)->first_name ?? '' }} {{ optional($support)->last_name ?? '' }}</span>
