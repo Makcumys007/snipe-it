@@ -80,7 +80,6 @@ class AssetModelsController extends Controller
         $model->notes = $request->input('notes');
         $model->user_id = Auth::id();
         $model->requestable = $request->has('requestable');
-
         if ($request->input('fieldset_id') != '') {
             $model->fieldset_id = $request->input('fieldset_id');
         }
@@ -150,7 +149,6 @@ class AssetModelsController extends Controller
         $model->category_id = $request->input('category_id');
         $model->notes = $request->input('notes');
         $model->requestable = $request->input('requestable', '0');
-
         $this->removeCustomFieldsDefaultValues($model);
 
         $model->fieldset_id = $request->input('fieldset_id');

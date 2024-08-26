@@ -143,6 +143,8 @@ class AssetsController extends Controller
             $asset->requestable             = request('requestable', 0);
             $asset->rtd_location_id         = request('rtd_location_id', null);
             $asset->byod                    = request('byod', 0);
+            
+            $asset->date_of_commissioning = request('date_of_commissioning', null);
 
             if (! empty($settings->audit_interval)) {
                 $asset->next_audit_date = Carbon::now()->addMonths($settings->audit_interval)->toDateString();
@@ -305,6 +307,7 @@ class AssetsController extends Controller
         $asset->warranty_months = $request->input('warranty_months', null);
         $asset->purchase_cost = $request->input('purchase_cost', null);
         $asset->purchase_date = $request->input('purchase_date', null);
+        $asset->date_of_commissioning = request('date_of_commissioning', null);
         $asset->next_audit_date = $request->input('next_audit_date', null);
         if ($request->filled('purchase_date') && !$request->filled('asset_eol_date') && ($asset->model->eol > 0)) {
             $asset->purchase_date = $request->input('purchase_date', null); 
