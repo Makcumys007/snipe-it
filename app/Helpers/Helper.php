@@ -1032,6 +1032,9 @@ class Helper
             if ($type == 'datetime') {
                 $dt['datetime'] = $tmp_date->format('Y-m-d H:i:s');
                 $dt['formatted'] = $tmp_date->format($settings->date_display_format.' '.$settings->time_display_format);
+            } elseif ($type == 'd.m.Y') {
+                $dt['date'] = $tmp_date->format('d.m.Y');
+                $dt['formatted'] = $tmp_date->format('d.m.Y');
             } else {
                 $dt['date'] = $tmp_date->format('Y-m-d');
                 $dt['formatted'] = $tmp_date->format($settings->date_display_format);

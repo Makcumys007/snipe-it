@@ -68,7 +68,7 @@
         <p class="right-align">ТОО «Казминералс Бозшаколь»</p>
         <p class="right-align">ФИО/подпись ________________/___________</p>
         <p class="right-align">Начальник отдела информационных технологий</p>
-        <p class="right-align">{{ $start_date }}</p>
+        <p class="right-align">{{ \App\Helpers\Helper::getFormattedDateObject($assetMaintenance->start_date, 'd.m.Y', false) }}</p>
         <br>
         <br>
         <p>Я, ниже подписавшийся <span class="bold-underline">{{ optional($support)->first_name ?? '' }} {{ optional($support)->last_name ?? '' }}, {{ optional($support)->jobtitle ?? '' }}</span>, составил настоящий акт о том, что для диагностики представлено следующее оборудование:</p>
@@ -84,7 +84,7 @@
                 <td>{{ optional($asset)->name ?? '' }}</td>
                 <td>{{ optional($asset)->asset_tag ?? '' }}</td>
                 <td>{{ optional($asset)->serial ?? '' }}</td>
-                <td>{{ $date_of_commissioning }}</td>
+                <td>{{ \App\Helpers\Helper::getFormattedDateObject($asset->date_of_commissioning, 'd.m.Y', false) }}</td>
                 <td>{{ optional($assetMaintenance)->title ?? '' }}</td>
             </tr>
         </table>
